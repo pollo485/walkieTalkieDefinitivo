@@ -11,8 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WalkieTalkieDefinitivo">
+
+        <activity
+            android:name=".Conversaciones"
+            android:exported="false" />
+        <activity
+            android:name=".Vinculacion"
+            android:exported="false" />
+        <activity
+            android:name=".Notas"
+            android:exported="false" />
+        <activity
+            android:name=".Registrar"
+            android:exported="false" />
+        <activity
+            android:name=".Radio"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".startup"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

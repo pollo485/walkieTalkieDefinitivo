@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ListaVinculados">
+        <item>Dispositivo 1</item>
+        <item>Dispositivo 2</item>
+    </string-array>
+    
+    <string-array name="ListaDisponibles">
+        <item>Dispositivo 1</item>
+        <item>Dispositivo 2</item>
+    </string-array>
+</resources>

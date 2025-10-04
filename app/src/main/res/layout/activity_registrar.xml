@@ -6,59 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    android:gravity="center"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".Registrar">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="top"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp">
 
         <ImageView
-            android:layout_gravity="center"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/logo_app"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_app"
+            android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#A9CBB5E2">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
             android:orientation="vertical"
-            android:background="#A9CBB5E2">
+            android:gravity="center"
+            android:background="#9D61EB"
+            android:padding="20dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:orientation="horizontal"
-                android:padding="20dp"
-                android:background="#9D61EB">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Registrar Usuario"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="30sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:hint="Iniciar sesion"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="30sp" />
-            </LinearLayout>
-
+        </LinearLayout>
             <EditText
                 android:id="@+id/username_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_corner"
-                android:hint="Usuario"
-                android:inputType="text"
+                android:hint="Nombre"
                 android:padding="18dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:autofillHints="username"/>
 
             <EditText
                 android:id="@+id/correo_input"
@@ -71,7 +72,8 @@
                 android:padding="18dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:autofillHints="emailAddress"/>
 
             <EditText
                 android:id="@+id/password_input"
@@ -84,31 +86,46 @@
                 android:padding="18dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/black"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkbox_input"
+                android:textSize="20sp"
+                android:autofillHints="password"/>
+            <EditText
+                android:id="@+id/Cpassword_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:hint="Recordar usuario"
-                android:padding="2dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Confirmar Password"
+                android:inputType="textPassword"
+                android:padding="18dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:autofillHints="password"/>
 
-            <Button
-                android:id="@+id/login_btn"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recordar usuario"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/registrar_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#AD7DF2"
-                android:padding="18dp"
-                android:text="Login"
+                android:padding="20dp"
+                android:text="Registrar"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-        </LinearLayout>
+            </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
