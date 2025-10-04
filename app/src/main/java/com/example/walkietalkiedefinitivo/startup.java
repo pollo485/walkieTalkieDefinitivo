@@ -11,23 +11,32 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class startup extends AppCompatActivity {
 
     Button buttonlogin;
-
+    Button buttonregister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_startup);
 
-        buttonlogin = findViewById(R.id.login_btn);
+        buttonlogin = findViewById(R.id.iniciarsesion_btn);
+        buttonregister = findViewById(R.id.registro_btn);
 
         buttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Radio.class);
+                Intent intent = new Intent(startup.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public  void onClick(View v){
+                Intent intent = new Intent(startup.this, Registrar.class);
                 startActivity(intent);
             }
         });

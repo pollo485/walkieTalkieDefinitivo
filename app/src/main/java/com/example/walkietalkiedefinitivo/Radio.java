@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,26 +12,36 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class Radio extends AppCompatActivity {
 
-    Button buttonlogin;
-
+    ImageButton btn_bluetooth;
+    Button btn_conversaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_radio);
 
-        buttonlogin = findViewById(R.id.login_btn);
+        btn_bluetooth = findViewById(R.id.buscar_bluetooth_btn);
+        btn_conversaciones = findViewById(R.id.ver_conversaciones_btn);
 
-        buttonlogin.setOnClickListener(new View.OnClickListener() {
+        btn_bluetooth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Radio.class);
+                Intent intent = new Intent(Radio.this,Vinculacion.class);
                 startActivity(intent);
             }
         });
+
+        btn_conversaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Radio.this,Conversaciones.class);
+                startActivity(intent);
+            }
+        });
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

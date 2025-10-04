@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WalkieTalkieDefinitivo</string>
+    <string name="bt_buscar">Buscar dispositivos Bluetooth</string>
+    <string name="bt_contestar">Contestar llamada</string>
+    <string name="bt_colgar">Colgar llamada Bluetooth</string>
 </resources>
